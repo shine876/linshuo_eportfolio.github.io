@@ -31,7 +31,7 @@
             padding: 40px 30px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            gap: 30px;
             flex-shrink: 0;
             box-shadow: 4px 0 10px rgba(0,0,0,0.1);
             position: relative;
@@ -64,11 +64,15 @@
             margin-bottom: 25px;
         }
 
-        .about-text {
+        .sidebar-section h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
+        .contact-info, .language-info {
             font-size: 0.9rem;
-            line-height: 1.7;
-            opacity: 0.9;
-            margin-bottom: 30px;
+            line-height: 1.8;
         }
 
         .main-content {
@@ -134,14 +138,9 @@
             font-weight: 600;
         }
 
-        .contact-info {
-            font-size: 0.9rem;
-            line-height: 1.8;
-        }
-
         @media (max-width: 1100px) {
             body { flex-direction: column; height: auto; overflow: visible; }
-            .sidebar { width: 100%; height: auto; }
+            .sidebar { width: 100%; height: auto; padding-top: 80px; }
             .avatar-space {
                 position: relative;
                 top: 0;
@@ -164,6 +163,26 @@
         <h1>LIN Shuo</h1>
         <div class="title">Software Engineering Student</div>
     </div>
+
+    <!-- Contact on the left -->
+    <div class="sidebar-section">
+        <h3>Contact</h3>
+        <div class="contact-info">
+            <p>📩 linshuo.dev@gmail.com</p>
+            <p>📞 +852 5123 4567</p>
+            <p>📍 Wong Tai Sin, Hong Kong</p>
+        </div>
+    </div>
+
+    <!-- Language under Contact -->
+    <div class="sidebar-section">
+        <h3>Languages</h3>
+        <div class="language-info">
+            <p>Mandarin: Fluent</p>
+            <p>Cantonese: Basic</p>
+            <p>English: Fair</p>
+        </div>
+    </div>
 </aside>
 
 <main class="main-content">
@@ -180,33 +199,25 @@
     <!-- 2. Skills & Proficiency -->
     <section>
         <div class="section-header">Skills & Proficiency</div>
-        <div class="content-grid">
-            <div>
-                <h3>Technical Skills</h3>
-                <div class="tag-cloud">
-                    <span class="tag">Java</span>
-                    <span class="tag">SQL</span>
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
-                    <span class="tag">Linux</span>
-                    <span class="tag">AI Tools</span>
-                    <span class="tag">Microsoft Office</span>
-                </div>
+        <div class="entry">
+            <h3>Technical Skills</h3>
+            <div class="tag-cloud">
+                <span class="tag">Java</span>
+                <span class="tag">SQL</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">Linux</span>
+                <span class="tag">AI Tools</span>
+                <span class="tag">Microsoft Office</span>
             </div>
-            <div>
-                <h3>Languages</h3>
-                <ul>
-                    <li>Mandarin: Fluent</li>
-                    <li>Cantonese: Basic</li>
-                    <li>English: Fair</li>
-                </ul>
-                <h3 style="margin-top:20px;">Soft Skills</h3>
-                <ul>
-                    <li>Communication</li>
-                    <li>Problem Solving</li>
-                    <li>Teamwork</li>
-                    <li>Responsibility</li>
-                </ul>
+        </div>
+        <div class="entry" style="margin-top:20px;">
+            <h3>Soft Skills</h3>
+            <div class="tag-cloud">
+                <span class="tag">Communication</span>
+                <span class="tag">Teamwork</span>
+                <span class="tag">Problem Solving</span>
+                <span class="tag">Responsibility</span>
             </div>
         </div>
     </section>
@@ -227,21 +238,11 @@
         <div class="section-header">Project</div>
         <div class="entry">
             <h3>Personal E-Portfolio Website</h3>
-            <p>A responsive personal portfolio website built with HTML and CSS to showcase my skills, goals, and contact information.</p>
+            <p>A responsive personal portfolio website built with HTML and CSS to showcase my skills, goals, and information.</p>
         </div>
         <div class="entry">
             <h3>Small Java Programs</h3>
             <p>Developed basic Java applications for learning and academic assignments, including calculation systems and simple interfaces.</p>
-        </div>
-    </section>
-
-    <!-- 5. Contact -->
-    <section>
-        <div class="section-header">Contact</div>
-        <div class="contact-info">
-            <p><strong>Email:</strong> aaaaaa@gmail.com</p>
-            <p><strong>Phone:</strong> 5100 0000</p>
-            <p><strong>Location:</strong> Wong Tai Sin, Hong Kong</p>
         </div>
     </section>
 
