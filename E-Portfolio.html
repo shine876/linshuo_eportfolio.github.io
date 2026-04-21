@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIN Shuo - E-Portfolio</title>
+    <style>
+        :root {
+            --primary: #1e3799;
+            --secondary: #eb2f06;
+            --dark: #2f3542;
+            --light: #f1f2f6;
+            --accent: #f6b93b;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            min-height: 100vh;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+
+        .sidebar {
+            width: 380px;
+            background-color: var(--primary);
+            color: white;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-shrink: 0;
+            box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .avatar-space {
+            position: absolute;
+            top: 40px;
+            right: -130px;
+            width: 120px;
+            height: 120px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 10;
+            overflow: hidden;
+        }
+
+        .profile-header h1 {
+            font-size: 2.2rem;
+            margin: 0 0 10px 0;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .profile-header .title {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+        }
+
+        .about-text {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 25px;
+        }
+
+        .contact-item {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 50px 60px 50px 150px;
+            overflow-y: auto;
+            background-color: white;
+        }
+
+        section {
+            margin-bottom: 45px;
+        }
+
+        .section-header {
+            font-size: 1.5rem;
+            color: var(--primary);
+            border-bottom: 2px solid var(--light);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .entry {
+            margin-bottom: 20px;
+        }
+
+        .entry h3 {
+            margin: 0 0 5px 0;
+            color: var(--dark);
+            font-size: 1.15rem;
+        }
+
+        .entry .sub-title {
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+
+        .entry .date {
+            color: #7f8c8d;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        ul {
+            padding-left: 18px;
+            margin: 10px 0;
+        }
+
+        li {
+            font-size: 0.9rem;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background-color: var(--light);
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .scholarship {
+            background-color: #fff9eb;
+            border-left: 4px solid var(--accent);
+            padding: 10px 15px;
+            margin-top: 10px;
+            font-size: 0.85rem;
+            font-style: italic;
+        }
+
+        .reference-card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 1100px) {
+            body { flex-direction: column; height: auto; overflow: visible; }
+            .sidebar { width: 100%; height: auto; }
+            .avatar-space {
+                position: relative;
+                top: 0;
+                right: 0;
+                margin: 0 auto 20px;
+            }
+            .main-content { width: 100%; padding: 40px 30px; }
+            .content-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <aside class="sidebar">
+        <!-- 已插入你的本地头像 -->
+        <div class="avatar-space">
+            <img src="C:\Users\m1782\OneDrive\Desktop\sdd\download.jpg" 
+                 style="width:100%; height:100%; object-fit:cover;">
+        </div>
+
+        <div class="profile-header">
+            <h1>LIN Shuo</h1>
+            <div class="title">Software Engineering Student</div>
+            <div class="about-text">
+                As a dedicated Software Engineering student at HKIIT, I possess hands-on experience in providing technical support and cybersecurity education. I am eager to leverage my technical proficiency and passion for innovation to contribute to a dynamic technology firm and further sharpen my IT expertise.
+            </div>
+        </div>
+
+        <div class="contact-info">
+            <div class="contact-item">📧 linshuo425@gmail.com</div>
+            <div class="contact-item">📞 +852 5100 0984</div>
+            <div class="contact-item">📍 Wong Tai Sin, Hong Kong</div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="content-grid">
+            <section>
+                <div class="section-header">Education</div>
+                <div class="entry">
+                    <span class="date">Sep 2024 - Present</span>
+                    <h3>IVE (Sha Tin)</h3>
+                    <div class="sub-title">Higher Diploma in Software Engineering</div>
+                    <div class="scholarship">
+                        <strong>Award:</strong> Entrance Scholarship for Non-local Students (Academic Achievement) 2024/25
+                    </div>
+                </div>
+                <div class="entry">
+                    <span class="date">Sep 2021 - Jun 2024</span>
+                    <h3>Jieyang No.1 Middle School</h3>
+                    <div class="sub-title">Guangdong High School Diploma</div>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-header">Work Experience</div>
+                <div class="entry">
+                    <span class="date">Jul 2025 - Aug 2025</span>
+                    <h3>Rotary Club of the Avenue of Stars</h3>
+                    <div class="sub-title">Technical Support Intern</div>
+                    <ul>
+                        <li>Provided technical support to participants including elderly and housewives.</li>
+                        <li>Assisted mentors with cybersecurity education and content creation.</li>
+                        <li>Designed PowerPoint materials and guided students in Excel and Word.</li>
+                        <li>Introduced AI development and practical AI tool usage to students.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <section>
+            <div class="section-header">Skills & Proficiency</div>
+            <div class="content-grid">
+                <div>
+                    <h3 style="font-size: 1rem; margin-bottom: 15px;">Technical Skills</h3>
+                    <div class="tag-cloud">
+                        <span class="tag">Java</span>
+                        <span class="tag">Linux</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">Microsoft Office</span>
+                        <span class="tag">Artificial Intelligence</span>
+                    </div>
+                    <h3 style="font-size: 1rem; margin: 20px 0 10px 0;">Soft Skills</h3>
+                    <p style="font-size: 0.9rem;">Communication, Accountability</p>
+                </div>
+                <div>
+                    <h3 style="font-size: 1rem; margin-bottom: 15px;">Languages</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><strong>Mandarin:</strong> Fluent</li>
+                        <li><strong>Cantonese:</strong> Fluent Comprehension / Basic Spoken</li>
+                        <li><strong>English:</strong> Fair</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-header">Academic Reference</div>
+            <div class="reference-card">
+                <h3 style="margin-bottom: 5px;">Mr. CHENG Pok Hong</h3>
+                <p style="margin: 0; font-size: 0.9rem; color: var(--secondary); font-weight: 600;">Professor of Software Engineering, IVE (Sha Tin)</p>
+                <p style="margin: 5px 0; font-size: 0.9rem;">Course Instructor for Java Programming</p>
+                <p style="margin: 10px 0 0 0; font-size: 0.9rem; font-weight: bold;">📧 phcheng@vtc.edu.hk</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
